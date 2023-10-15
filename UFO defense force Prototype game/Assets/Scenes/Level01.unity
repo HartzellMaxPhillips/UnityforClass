@@ -123,6 +123,37 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &84315445
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 84315446}
+  m_Layer: 0
+  m_Name: Blaster
+  m_TagString: Untagged
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &84315446
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 84315445}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1.089905}
+  m_LocalScale: {x: 0.9721836, y: 1.25, z: 0.885727}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 674915551}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &469463224
 GameObject:
   m_ObjectHideFlags: 0
@@ -241,8 +272,9 @@ GameObject:
   - component: {fileID: 674915550}
   - component: {fileID: 674915549}
   - component: {fileID: 674915548}
+  - component: {fileID: 674915552}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Player ship
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -331,9 +363,27 @@ Transform:
   m_LocalPosition: {x: 0, y: 1, z: -6.64}
   m_LocalScale: {x: 1.0286123, y: 0.8, z: 1.129016}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 84315446}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &674915552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 674915547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c54f845b0714bc419d23ea6eb5dbe2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  horizontalInput: 0
+  speed: 25
+  xRange: 20
+  blaster: {fileID: 84315446}
+  laserBolt: {fileID: 5914189759893490655, guid: f4ae8340a5ea5b240a4a13eb25b47e3b, type: 3}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -725,7 +775,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: 8.23}
-  m_LocalScale: {x: 1, y: 0.4063809, z: 1}
+  m_LocalScale: {x: 1.6099, y: 0.6542326, z: 1.6099}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1174637093}
