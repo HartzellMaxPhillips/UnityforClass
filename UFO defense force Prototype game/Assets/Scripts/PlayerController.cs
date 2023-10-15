@@ -40,5 +40,12 @@ public class PlayerController : MonoBehaviour
             //Create the laserBolt at the blasters position, maintaining the Objects Rotation.
             Instantiate(laserBolt, blaster.transform.position, laserBolt.transform.rotation);
         }
+
+        
+    }
+
+    private void OnTriggerEnter(Collider other) 
+    {
+        Destroy(other.gameObject);
     }
 }
