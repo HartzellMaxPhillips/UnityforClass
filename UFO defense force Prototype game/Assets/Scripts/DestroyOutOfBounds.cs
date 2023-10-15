@@ -6,7 +6,7 @@ public class NewBehaviourScript : MonoBehaviour
 {
     public float topBounds = 30f;
     
-    public float lowerBounds = -10f;
+    public float lowerBounds = -12f;
     // Start is called before the first frame update
     void Awake()
     {
@@ -22,7 +22,6 @@ public class NewBehaviourScript : MonoBehaviour
         }
         else if (transform.position.z < lowerBounds)
         {
-            Debug.Log("Game Over.");
             Destroy(gameObject);
             //Time.timeScale = 0;
         }
