@@ -6,7 +6,7 @@ public class DetectCollision : MonoBehaviour
 {
     void OnTriggerEnter(Collider Other) 
     {
-        if (Other.CompareTag("Player ship"))
+        if (gameObject.name == "Player ship")
         {
 
         }

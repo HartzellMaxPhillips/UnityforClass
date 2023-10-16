@@ -6,10 +6,18 @@ public class DropPowerup : MonoBehaviour
 {
     public Transform powerupSpawner;
     public GameObject powerup;
+
+    private float spawnRangeX = 20f;
+
+    private float spawnPosZ = 20f;
+
+    private float startDelay = 4f;
+
+    private float spawnInterval = 2f;
     // Start is called before the first frame update
     void Start()
     {
-        
+        InvokeRepeating("SpawnPowerup", startDelay, spawnInterval);
     }
 
     // Update is called once per frame
@@ -20,5 +28,11 @@ public class DropPowerup : MonoBehaviour
         {
             Instantiate(powerup, powerupSpawner.transform.position, powerup.transform.rotation);
         }
+    }
+
+        void SpawnPowerup() 
+    {
+        Vector3 spawnPos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 1, spawnPosZ);
+        Instantiate(powerup, spawnPos, powerup.transform.rotation); //Spawns a powerup
     }
 }
