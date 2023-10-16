@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     public Transform blaster;
     public GameObject laserBolt;
 
-    private int powerUpCount = 0;
+    public int powerUpCount = 0;
    
 
     // Update is called once per frame
@@ -48,12 +48,13 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other) 
     {
-        Destroy(other.gameObject);
+
 
         if(other.CompareTag("Powerup")) 
         {
             powerUpCount++;
             Debug.Log(powerUpCount);
+            Destroy(other.gameObject);  
         }
     }
 }

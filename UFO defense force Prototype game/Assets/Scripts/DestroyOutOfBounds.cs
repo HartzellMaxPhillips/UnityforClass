@@ -22,8 +22,16 @@ public class NewBehaviourScript : MonoBehaviour
         }
         else if (transform.position.z < lowerBounds)
         {
+            if(gameObject.name == "Powerup")
+            {
+                Destroy(gameObject);    
+            }
+            else
+            {
+            Debug.Log("Game Over.");
             Destroy(gameObject);
-            //Time.timeScale = 0;
+            Time.timeScale = 0;
+            }
         }
     }
 }

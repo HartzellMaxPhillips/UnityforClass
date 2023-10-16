@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 1294312095697207136}
   - component: {fileID: 7851823150016606897}
   - component: {fileID: -7899489056487555659}
+  - component: {fileID: -5517793290331859830}
+  - component: {fileID: -5318361152686226725}
   m_Layer: 0
   m_Name: UFO_Mothership
   m_TagString: Untagged
@@ -102,7 +104,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -120,7 +122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 999ff4fc1cd7a074b8c23fa1d7f23da4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 15
+  speed: 4
 --- !u!114 &-7899489056487555659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135,6 +137,45 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   topBounds: 30
   lowerBounds: -12
+--- !u!54 &-5517793290331859830
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8834055968348831724}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &-5318361152686226725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8834055968348831724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a46bb2ad7adfd084ebea69fbf1eb87ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8986775910136082202
 GameObject:
   m_ObjectHideFlags: 0
