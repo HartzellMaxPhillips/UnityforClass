@@ -22,13 +22,16 @@ public class DetectCollision : MonoBehaviour
             Destroy(gameObject);
             Destroy(Other.gameObject);
         }
+
+        if (Other.CompareTag("UFO")) 
+        {
         Physics.IgnoreCollision(UFO_Scout.GetComponent<Collider>(), UFO_Cruiser.GetComponent<Collider>(), true);
         Physics.IgnoreCollision(UFO_Scout.GetComponent<Collider>(), UFO_Mothership.GetComponent<Collider>(), true);
         Physics.IgnoreCollision(UFO_Mothership.GetComponent<Collider>(), UFO_Cruiser.GetComponent<Collider>(), true);
         Physics.IgnoreCollision(UFO_Mothership.GetComponent<Collider>(), UFO_Scout.GetComponent<Collider>(), true);
         Physics.IgnoreCollision(UFO_Cruiser.GetComponent<Collider>(), UFO_Scout.GetComponent<Collider>(), true);
         Physics.IgnoreCollision(UFO_Cruiser.GetComponent<Collider>(), UFO_Mothership.GetComponent<Collider>(), true);
-
+        }
     }
 
 }

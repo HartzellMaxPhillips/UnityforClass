@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: -5318361152686226725}
   m_Layer: 0
   m_Name: UFO_Mothership
-  m_TagString: Untagged
+  m_TagString: UFO
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -104,7 +104,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -139,6 +139,7 @@ MonoBehaviour:
   topBounds: 30
   isGameOver: 1
   lowerBounds: -12
+  PowerUpObject: {fileID: 0}
 --- !u!54 &-5517793290331859830
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -179,11 +180,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreManager: {fileID: 0}
-  UFO_Cruiser: {fileID: 1546125561870547534, guid: 56bb2bfb6811a1843be56426ab211df6, type: 3}
   UFO_Scout: {fileID: 7832962648018462247, guid: 691571eca4010a747a2d972d4c8f89bc, type: 3}
+  UFO_Cruiser: {fileID: 1546125561870547534, guid: 56bb2bfb6811a1843be56426ab211df6, type: 3}
   UFO_Mothership: {fileID: 8834055968348831724}
-  Player_Ship: {fileID: 8476417868992229080, guid: 75ccf2757b5c80041a27dab6da4bdcab, type: 3}
-  Powerup: {fileID: 786767307333290318, guid: 6ce1b2c8cae424648a94503745942736, type: 3}
   scoreToGive: 5
 --- !u!1 &8986775910136082202
 GameObject:

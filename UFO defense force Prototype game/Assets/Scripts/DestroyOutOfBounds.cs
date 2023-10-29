@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class NewBehaviourScript : MonoBehaviour
 {
-    public GameManager gameManager;
+    public GameManager GameManager;
     public float topBounds = 30f;
-    public bool isGameOver;
     public float lowerBounds = -12f;
 
     public GameObject PowerUpObject;
@@ -27,9 +26,9 @@ public class NewBehaviourScript : MonoBehaviour
             else
             {
                 Debug.Log("originalGO");
+                GameManager.isGameOver = true; 
                 Destroy(gameObject);
-
-                isGameOver = true;
+                Time.timeScale = 0;
             }
         }
     }

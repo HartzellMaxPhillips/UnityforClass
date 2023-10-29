@@ -13,7 +13,13 @@ public class PlayerController : MonoBehaviour
     public GameObject laserBolt;
 
     public int powerUpCount = 0;
+
+    public GameManager gameManager;
    
+   void Start() 
+   {
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+   }
 
     // Update is called once per frame
     void Update()
@@ -37,7 +43,7 @@ public class PlayerController : MonoBehaviour
         }
 
         //if spacebar is pressed, fire laserbolt
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetKeyDown(KeyCode.Space) && gameManager.isGameOver == false)
         {
             //Create the laserBolt at the blasters position, maintaining the Objects Rotation.
             Instantiate(laserBolt, blaster.transform.position, laserBolt.transform.rotation);
