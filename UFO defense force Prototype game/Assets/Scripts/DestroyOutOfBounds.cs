@@ -10,6 +10,10 @@ public class NewBehaviourScript : MonoBehaviour
 
     public GameObject PowerUpObject;
     
+    void Start() 
+    {
+        GameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+    }
     // Update is called once per frame
     void Update()
     {
@@ -25,7 +29,6 @@ public class NewBehaviourScript : MonoBehaviour
             }
             else
             {
-                Debug.Log("originalGO");
                 GameManager.isGameOver = true; 
                 Destroy(gameObject);
                 Time.timeScale = 0;
