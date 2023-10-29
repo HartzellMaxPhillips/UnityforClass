@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Powerup
   - Player ship
+  - Bolt
   layers:
   - Default
   - TransparentFX

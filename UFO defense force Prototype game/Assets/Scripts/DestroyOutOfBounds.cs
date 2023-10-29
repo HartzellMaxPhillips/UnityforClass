@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class NewBehaviourScript : MonoBehaviour
 {
+    public GameManager gameManager;
     public float topBounds = 30f;
-    
+    public bool isGameOver;
     public float lowerBounds = -12f;
-    // Start is called before the first frame update
-    void Awake()
-    {
-        Time.timeScale = 1;
-    }
 
+    public GameObject PowerUpObject;
+    
     // Update is called once per frame
     void Update()
     {
@@ -22,15 +20,16 @@ public class NewBehaviourScript : MonoBehaviour
         }
         else if (transform.position.z < lowerBounds)
         {
-            if(gameObject.name == "Powerup")
+            if(gameObject.name == "Powerup(Clone)")
             {
                 Destroy(gameObject);    
             }
             else
             {
-            Debug.Log("Game Over.");
-            Destroy(gameObject);
-            //Time.timeScale = 0;
+                Debug.Log("originalGO");
+                Destroy(gameObject);
+
+                isGameOver = true;
             }
         }
     }

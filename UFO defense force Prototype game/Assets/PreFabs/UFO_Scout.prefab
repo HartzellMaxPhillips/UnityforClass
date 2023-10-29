@@ -135,7 +135,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb3ae228d63d15847a5cdbd6c1c79ab2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   topBounds: 30
+  isGameOver: 1
   lowerBounds: -12
 --- !u!54 &-6027762524377330696
 Rigidbody:
@@ -176,6 +178,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a46bb2ad7adfd084ebea69fbf1eb87ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreManager: {fileID: 0}
+  UFO_Cruiser: {fileID: 1546125561870547534, guid: 56bb2bfb6811a1843be56426ab211df6, type: 3}
+  UFO_Scout: {fileID: 7832962648018462247}
+  UFO_Mothership: {fileID: 8834055968348831724, guid: 50ad68bfff296a840afe1f60444855ef, type: 3}
+  Player_Ship: {fileID: 8476417868992229080, guid: 75ccf2757b5c80041a27dab6da4bdcab, type: 3}
+  Powerup: {fileID: 786767307333290318, guid: 6ce1b2c8cae424648a94503745942736, type: 3}
+  scoreToGive: 15
 --- !u!1 &7849945782479449733
 GameObject:
   m_ObjectHideFlags: 0

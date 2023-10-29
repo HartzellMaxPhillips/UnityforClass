@@ -122,7 +122,7 @@ GameObject:
   - component: {fileID: 2262168960095653135}
   m_Layer: 0
   m_Name: bolt_container
-  m_TagString: Untagged
+  m_TagString: Bolt
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -168,7 +168,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb3ae228d63d15847a5cdbd6c1c79ab2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   topBounds: 30
+  isGameOver: 0
   lowerBounds: -10
 --- !u!136 &-1367596083240569161
 CapsuleCollider:
