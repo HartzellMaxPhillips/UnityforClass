@@ -8,11 +8,17 @@ public class ScoreManager : MonoBehaviour
     public int score;
 
     public TextMeshProUGUI scoreText;
+    public AudioSource audioSource;
+    public AudioClip audioClip;
+
     // Start is called before the first frame update
     public void IncreaseScore(int amount) //this method is called when we need to increase the score by a predetermined amount.
     {
+
         score += amount;
         UpdateScoreText();
+        audioSource.Play();
+        audioSource.clip = audioClip;
     }
 
     public void DecreaseScore(int amount) //this method is called when we need to decrease the score by a predetermined amount.
