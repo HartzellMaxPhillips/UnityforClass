@@ -15,6 +15,8 @@ public class PlayerController : MonoBehaviour
     public int powerUpCount = 0;
 
     public GameManager gameManager;
+    public AudioSource audioSource;
+    public AudioClip audioClip;
    
    void Start() 
    {
@@ -47,6 +49,8 @@ public class PlayerController : MonoBehaviour
         {
             //Create the laserBolt at the blasters position, maintaining the Objects Rotation.
             Instantiate(laserBolt, blaster.transform.position, laserBolt.transform.rotation);
+            audioSource.clip = audioClip;
+            audioSource.Play();
         }
 
         

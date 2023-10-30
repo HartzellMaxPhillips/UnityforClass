@@ -135,9 +135,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb3ae228d63d15847a5cdbd6c1c79ab2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 0}
+  GameManager: {fileID: 0}
   topBounds: 30
-  isGameOver: 1
   lowerBounds: -12
   PowerUpObject: {fileID: 0}
 --- !u!54 &-5517793290331859830
@@ -183,6 +182,9 @@ MonoBehaviour:
   UFO_Scout: {fileID: 7832962648018462247, guid: 691571eca4010a747a2d972d4c8f89bc, type: 3}
   UFO_Cruiser: {fileID: 1546125561870547534, guid: 56bb2bfb6811a1843be56426ab211df6, type: 3}
   UFO_Mothership: {fileID: 8834055968348831724}
+  audioSource: {fileID: 0}
+  audioClip: {fileID: 8300000, guid: f8607e841d149c24b8457e0cac1701b9, type: 3}
+  delay: 2
   scoreToGive: 5
 --- !u!1 &8986775910136082202
 GameObject:
