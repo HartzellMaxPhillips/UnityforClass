@@ -5,12 +5,12 @@ using UnityEngine;
 public class EnemySpawnManager : MonoBehaviour
 {
     public GameObject[] ufoPrefabs; //Array to store UFO ships
-    private float spawnRangeX = 16f;
+    private float spawnRangeX = 14f;
 
-    private float spawnPosZ = 20f;
+    private float spawnPosZ = 18f;
     
     private float startDelay = 2f;
-    private float spawnInterval = 1.5f;
+    private float spawnInterval = 1f;
     void Start() 
     {
         InvokeRepeating("SpawnRandomUFO", startDelay, spawnInterval);

@@ -7,13 +7,13 @@ public class DropPowerup : MonoBehaviour
     public Transform powerupSpawner;
     public GameObject powerup;
 
-    private float spawnRangeX = 20f;
+    private float spawnRangeX = 14f;
 
     private float spawnPosZ = 20f;
 
     private float startDelay = 4f;
 
-    private float spawnInterval = 2f;
+    private float spawnInterval = 5f;
     // Start is called before the first frame update
     void Start()
     {

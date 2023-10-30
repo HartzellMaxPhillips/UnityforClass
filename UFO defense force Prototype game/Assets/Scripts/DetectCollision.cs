@@ -8,8 +8,6 @@ public class DetectCollision : MonoBehaviour
     public GameObject UFO_Scout;
     public GameObject UFO_Cruiser;
     public GameObject UFO_Mothership;
-    public AudioSource audioSource;
-    public AudioClip audioClip;
 
     public int scoreToGive;
     void Start() 
@@ -20,8 +18,6 @@ public class DetectCollision : MonoBehaviour
     {
         if (Other.CompareTag("Bolt"))
         {
-            audioSource.Play();
-            audioSource.clip = audioClip;
             scoreManager.IncreaseScore(scoreToGive);
             Destroy(gameObject);
             Destroy(Other.gameObject);

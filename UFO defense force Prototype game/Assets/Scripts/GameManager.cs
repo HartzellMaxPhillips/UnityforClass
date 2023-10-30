@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public AudioSource audioSource;
+    public AudioClip audioClip;
     public bool isGameOver;
     private GameObject gameOverText;
 
@@ -34,6 +36,8 @@ public class GameManager : MonoBehaviour
 
     public void EndGame()
     {
+        audioSource.clip = audioClip;
+        audioSource.Play();
         gameOverText.gameObject.SetActive(true);
         Time.timeScale = 0;
     }
