@@ -6,7 +6,9 @@ public class GameManager : MonoBehaviour
 {
     public AudioSource audioSource;
     public AudioClip audioClip;
+    public GameOverSoundScript GameOver;
     public bool isGameOver;
+    public bool gameOverCalled = false;
     private GameObject gameOverText;
 
     void Awake() 
@@ -18,6 +20,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         gameOverText = GameObject.Find("GameOverText");
+
     }
 
     // Update is called once per frame
@@ -25,7 +28,12 @@ public class GameManager : MonoBehaviour
     {
         if(isGameOver)
         {
-            EndGame();
+            
+            if(gameOverCalled == false) 
+            {
+                EndGame();
+                gameOverCalled = true;
+            }
         }
         else  
         {
@@ -36,8 +44,10 @@ public class GameManager : MonoBehaviour
 
     public void EndGame()
     {
-        audioSource.clip = audioClip;
-        audioSource.Play();
+        //audioSource.clip = audioClip;
+        //audioSource.PlayOneShot();
+        GameOver.GameOver();
+        Debug.Log("endgamecalled");
         gameOverText.gameObject.SetActive(true);
         Time.timeScale = 0;
     }
