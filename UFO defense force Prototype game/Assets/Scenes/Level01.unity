@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.43694058, g: 0.484612, b: 0.5648695, a: 1}
+  m_IndirectSpecularColor: {r: 0.4369402, g: 0.4846115, b: 0.56486917, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -379,12 +379,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 81952647}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -24, y: 66, z: 18.358116}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 20, z: 1.76}
+  m_LocalScale: {x: 140.5082, y: 140.50816, z: 140.50816}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 963194228}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &81952650
 MonoBehaviour:
@@ -398,6 +398,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8628ea5bb9c06f4c8d970804e9682cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameOverAudioSource: {fileID: 81952648}
+  isGameOver: {fileID: 633258326}
 --- !u!1 &128824695
 GameObject:
   m_ObjectHideFlags: 0
@@ -604,7 +606,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 81952648}
   audioClip: {fileID: 8300000, guid: 78ca48938a9731c46a97b69dab7219c7, type: 3}
-  isGameOver: 1
+  GameOver: {fileID: 81952650}
+  isGameOver: 0
+  gameOverCalled: 0
 --- !u!4 &633258327
 Transform:
   m_ObjectHideFlags: 0
@@ -614,7 +618,7 @@ Transform:
   m_GameObject: {fileID: 633258325}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3, y: 43, z: 0.054840088}
+  m_LocalPosition: {x: -3, y: 14.2, z: 0.054840088}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1027,7 +1031,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 20, z: 1.76}
   m_LocalScale: {x: 0.0071170228, y: 0.0071170228, z: 0.0071170228}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 81952649}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!82 &997739960 stripped
@@ -1595,4 +1600,3 @@ SceneRoots:
   - {fileID: 633258327}
   - {fileID: 1475374476}
   - {fileID: 815545533}
-  - {fileID: 81952649}

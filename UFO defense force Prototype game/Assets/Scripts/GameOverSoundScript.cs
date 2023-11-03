@@ -5,17 +5,18 @@ using UnityEngine;
 public class GameOverSoundScript : MonoBehaviour
 {
     
-        private AudioSource gameOverAudioSource;
-
-        void Start()
+        public AudioSource gameOverAudioSource;
+        public GameManager isGameOver;
+        public void GameOver()
         {
             // Get the AudioSource component from the GAMEOVER object
             gameOverAudioSource = GetComponent<AudioSource>();
 
             // Check if an AudioSource component exists
-            if (gameOverAudioSource != null)
+            if (gameOverAudioSource != null && isGameOver == true )
             {
                 // Play the sound
+                Debug.Log("GameOverSoundScriptSoundPlay");
                 gameOverAudioSource.Play();
             }
             else
