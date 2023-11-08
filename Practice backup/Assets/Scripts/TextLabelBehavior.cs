@@ -11,8 +11,6 @@ public class TextLabelBehavior : MonoBehaviour
     {
         label = GetComponent<Text>();
         UpdateLabel();
-
-
     }
 
     public void UpdateLabel () 
