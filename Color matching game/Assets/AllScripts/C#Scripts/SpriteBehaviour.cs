@@ -3,15 +3,29 @@ using UnityEngine;
 [RequireComponent(typeof(SpriteRenderer))]
 public class SpriteBehaviour : MonoBehaviour
 {
-    private SpriteRenderer rendererObj;
+    public SpriteRenderer rendererObj;
+
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         rendererObj = GetComponent<SpriteRenderer>();
+
+        // Check if the SpriteRenderer is found
+        if (rendererObj == null)
+        {
+            Debug.LogError("SpriteRenderer not found on GameObject: " + gameObject.name);
+        }
     }
 
-    public void changeRendererColor(ColorID obj) 
+    public void ChangeRendererColor(ColorID obj) 
     {
-        rendererObj.color = obj.value;
+        if (rendererObj != null)
+        {
+            rendererObj.color = obj.value;
+        }
+        else
+        {
+            Debug.LogError("SpriteRenderer is not initialized. Check the Start method.");
+        }
     }
 }
