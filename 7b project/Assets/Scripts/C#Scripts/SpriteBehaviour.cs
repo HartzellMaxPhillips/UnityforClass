@@ -28,4 +28,9 @@ public class SpriteBehaviour : MonoBehaviour
             Debug.LogError("SpriteRenderer is not initialized. Check the Start method.");
         }
     }
+
+    public void ChangeRendererColorList(ColorIDDataList obj) 
+    {
+        rendererObj.color = obj.currentColor.value;
+    }
 }
