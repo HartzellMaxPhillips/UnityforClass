@@ -5,21 +5,51 @@ using UnityEngine.Events;
 
 public class CoroutineBehavior : MonoBehaviour
 {
-    public UnityEvent repeatEvent;
-    public int counterNum = 3;
+    public bool canRun;
+    public UnityEvent startEvent, startCountEvent, repeatCountEvent, endCountEvent, repeatUntilFalseEvent;
+    public IntData counterNum;
     public float seconds = 3.0f;
     private WaitForSeconds wfsObj;
     private WaitForFixedUpdate wffuObj;
-    // Start is called before the first frame update
-    IEnumerator Start()
+
+    private void Start()
     {
         wfsObj = new WaitForSeconds(seconds);
         wffuObj = new WaitForFixedUpdate();
-        
-        while(counterNum > 0) 
+        startEvent.Invoke();
+    }
+
+    public void StartCounting() 
+    {
+        StartCoroutine(Counting());
+    }
+
+    IEnumerator Counting()
+    {
+        startCountEvent.Invoke();
+        yield return wfsObj;
+        while(counterNum.value > 0) 
+        {
+            repeatCountEvent.Invoke();
+            counterNum.value--;
+            yield return wfsObj;
+        }
+        endCountEvent.Invoke();
+    }
+
+    public void StartRepeatUntilFalse() 
+    {
+        canRun = true;
+        StartCoroutine(RepeatUntilFalse());
+    }
+
+    private IEnumerator RepeatUntilFalse() 
+    {
+        while(canRun) 
         {
             yield return wfsObj;
-            repeatEvent.Invoke();
+            repeatUntilFalseEvent.Invoke();
         }
+        
     }
 }
