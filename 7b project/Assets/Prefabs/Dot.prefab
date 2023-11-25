@@ -14,11 +14,10 @@ GameObject:
   - component: {fileID: 6588637670662397847}
   - component: {fileID: -6632669886032037786}
   - component: {fileID: 1078205051365685389}
-  - component: {fileID: -2908867646615526242}
   - component: {fileID: 7814146467655139071}
-  - component: {fileID: 9037228476540795534}
-  m_Layer: 7
-  m_Name: Ring
+  - component: {fileID: -2293122659149094482}
+  m_Layer: 6
+  m_Name: Dot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -80,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -489827044, guid: d6433a917344ed740a7b324d13b59c9a, type: 3}
+  m_Sprite: {fileID: -2084380069, guid: d6433a917344ed740a7b324d13b59c9a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -185,23 +184,6 @@ MonoBehaviour:
   disableEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &-2908867646615526242
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5800268392922457962}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c36f4b13a5f8e743b8aee07271ba2c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  idObj: {fileID: 0}
-  startEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  colorIDDataListObj: {fileID: 11400000, guid: 35ce1bd21e5f0d34686ad06d6eca2f81, type: 2}
 --- !u!114 &7814146467655139071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -215,7 +197,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   seconds: 3
---- !u!114 &9037228476540795534
+--- !u!114 &-2293122659149094482
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -224,7 +206,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5800268392922457962}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 281de52a38837c44f8c70f51216ffe8a, type: 3}
+  m_Script: {fileID: 11500000, guid: a704e35ae4279844f9946701ee6d3db2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   idObj: {fileID: 0}
@@ -237,3 +219,4 @@ MonoBehaviour:
   noMatchDelayedEvent:
     m_PersistentCalls:
       m_Calls: []
+  colorIDDataListObj: {fileID: 0}
